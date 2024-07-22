@@ -14,7 +14,7 @@ def averaging_blocks(x, y):
             avg_color = np.mean(lena_out[i:i+x, j:j+y], axis=(0, 1))
             lena_out[i:i+x, j:j+y] = avg_color
 
-def averaging(x, y):
+def averaging(y,x):
     inp = np.copy(lena)
     a, c = x // 2, y // 2
     b, d = x - a, y - c
@@ -26,6 +26,6 @@ def averaging(x, y):
     cv2.waitKey(0)
 
 k = 10
-averaging(k,k)
-cv2.imshow('frame', cv2.blur(np.copy(lena), (10, 10)))
+averaging(10,20)
+cv2.imshow('frame', cv2.blur(np.copy(lena), (10, 20)))
 cv2.waitKey(0)

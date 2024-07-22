@@ -6,6 +6,6 @@ import numpy as np
 lena = cv2.imread('./assets/lena.png')
 
 k = 10
-img_blurred = cv2.GaussianBlur(np.copy(lena), (11,11), 5)
-cv2.imshow('frame', img_blurred)
+img_median_blur = cv2.medianBlur(np.copy(lena), 51)
+cv2.imshow('frame', img_median_blur)
 cv2.waitKey(0)
